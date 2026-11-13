@@ -63,6 +63,59 @@ derrotas y estás fuera. Dentro de la batalla eliges atacar, defender, una
 habilidad o el Noble Fantasma, que cuesta 100 de maná y multiplica el daño por
 tres.
 
+### Una batalla de verdad
+
+Esto no es un ejemplo inventado: es la salida del motor jugando un duelo entre
+Emiya (Archer) y Altria Pendragon (Saber), los dos a nivel 15, con la IA a los
+dos lados. Se reproduce con `python tools/ver_batalla.py`, desde la carpeta `bot/`.
+
+```
+--- Turno 1 ---
+Hikari usa Forja Magica.
+Hikari pega x2.5 durante 1 turno.
+Rin usa Carisma.
+Rin pega x2.5 durante 1 turno.
+--- Turno 2 ---
+Archer tiene ventaja sobre Saber.
+Hikari hace 401 de dano a Rin (1109/1510).
+Saber esta en desventaja contra Archer.
+Rin hace 218 de dano a Hikari (1190/1408).
+--- Turno 3 ---
+Hikari usa Clarividencia.
+Hikari suma 45 puntos de probabilidad de critico durante 3 turnos.
+Rin usa Explosion de Mana.
+Rin pega x2.5 durante 1 turno.
+
+        (turnos 4 y 5: los dos se preparan y se miden)
+
+--- Turno 6 ---
+Rin se pone en guardia.
+Golpe critico.
+Archer tiene ventaja sobre Saber.
+Rin bloquea parte del golpe.
+Hikari hace 181 de dano a Rin (778/1510).
+--- Turno 7 ---
+Hikari usa Forja Magica.
+Hikari pega x2.5 durante 1 turno.
+Rin usa Explosion de Mana.
+Rin pega x2.5 durante 1 turno.
+--- Turno 8 ---
+Hikari libera su Noble Fantasma.
+Archer tiene ventaja sobre Saber.
+Hikari hace 1401 de dano a Rin (0/1510).
+Rin cae.
+La batalla termina. Hikari queda en pie.
+```
+
+Ahí se ve casi todo el juego: las habilidades gastando el turno entero, el
+triángulo de clases aplicándose en los dos sentidos, un crítico, una defensa
+que bloquea parte del golpe, y los 100 de maná ahorrados durante ocho turnos
+gastados de una vez en un Noble Fantasma de 1401 de daño.
+
+Y se ve también por qué este registro **nunca sale al canal**: nombra las
+habilidades, y el nombre de una habilidad delata al Servant que la lleva. En
+una partida lo lee cada participante en privado, desde su menú.
+
 Las reglas completas están en [`docs/reglas-graal.md`](docs/reglas-graal.md). Si
 no has visto *Fate* en tu vida, empieza por
 [`docs/como-jugar.md`](docs/como-jugar.md), que es media página.
@@ -82,6 +135,7 @@ python -m src.simulator --semilla 7 plantel      # busca personajes rotos
 python -m src.simulator --semilla 7 triangulo    # matriz de emparejamientos
 python -m src.simulator --semilla 7 guerras -n 600   # guerras enteras
 python -m src.simulator --semilla 7 economia     # cuánto oro da una guerra
+python tools/ver_batalla.py                      # el registro de una batalla
 ```
 
 Para encenderlo de verdad hace falta un token de Discord en `bot/.env` (hay una

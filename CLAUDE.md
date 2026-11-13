@@ -181,6 +181,8 @@ python -m src.simulator --semilla 7 npc       # la escalera de entrenamiento:
 python -m src.simulator --semilla 7 habilidades  # si pagan el turno que cuestan
 python -m src.simulator --semilla 7 guerras   # guerras enteras, con bots o sin ellos
 python -m src.simulator --semilla 7 economia  # cuanto oro da una guerra y que compra
+python tools/ver_batalla.py                   # el registro de una batalla,
+                                              # con la IA a los dos lados
 python tools/importar_servants.py             # regenera el plantel
 python tools/descargar_imagenes.py            # el arte, a data/imagenes/:
                                               # 1396 imagenes, ~0.74 GB, copia
