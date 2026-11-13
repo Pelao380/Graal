@@ -1,0 +1,42 @@
+# Credenciales: el token del bot nunca se sube
+.env
+*.env
+config.local.*
+
+# Volcados crudos de Atlas Academy: pesan mucho y se regeneran con
+# tools/importar_servants.py. El plantel derivado (personajes_generados.json)
+# si se guarda, porque es pequeno y las pruebas lo necesitan.
+bot/data/basic_servant.json
+bot/data/nice_servant.json
+
+# El arte de los personajes: se descarga con tools/descargar_imagenes.py.
+# No va al repositorio, para que cada uno baje su propia copia en vez de
+# recibirla de otro.
+bot/data/imagenes/
+
+# Copias de seguridad: antes de tocar un archivo se guarda como estaba en
+# .respaldo/<fecha>/. Son copias locales, no historial: no van al repositorio.
+.respaldo/
+
+# Base de datos local
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editores y sistema
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

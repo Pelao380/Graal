@@ -1,0 +1,116 @@
+{
+  "_nota": [
+    "El catalogo de objetos. Este si se edita a mano: no sale de ningun",
+    "export, es nuestro. Cada objeto trae su clave, cuando se usa y QUE hace;",
+    "CUANTO da lo decide el juego, en src/game/objetos.py.",
+    "",
+    "Los nombres y las descripciones no estan aqui: viven en textos.json,",
+    "como objeto.<clave>.nombre y objeto.<clave>.desc, porque ninguna frase",
+    "que lea el jugador se escribe fuera de ahi.",
+    "",
+    "El peso es lo comun que es en una suelta: mas peso, mas veces sale."
+  ],
+  "objetos": [
+    {
+      "clave": "piedra_furia",
+      "momento": "combate",
+      "efecto": "ataque",
+      "peso": 14
+    },
+    {
+      "clave": "escama_guardian",
+      "momento": "combate",
+      "efecto": "defensa",
+      "peso": 14
+    },
+    {
+      "clave": "ojo_certero",
+      "momento": "combate",
+      "efecto": "critico",
+      "peso": 8
+    },
+    {
+      "clave": "gema_mana",
+      "momento": "combate",
+      "efecto": "mana",
+      "peso": 10
+    },
+    {
+      "clave": "elixir",
+      "momento": "combate",
+      "efecto": "curar",
+      "peso": 10
+    },
+    {
+      "clave": "tomo_saber",
+      "momento": "preparacion",
+      "efecto_fuera": "xp",
+      "peso": 12
+    },
+    {
+      "clave": "vendaje",
+      "momento": "preparacion",
+      "efecto_fuera": "curar_antes",
+      "peso": 8
+    },
+    {
+      "clave": "reloj_arena",
+      "momento": "preparacion",
+      "efecto_fuera": "combate_extra",
+      "peso": 6
+    },
+
+    {
+      "_nota": "Catalizadores: apuntan la invocacion a una clase. La mecanica",
+      "_nota2": "esta sin cerrar (ver puntos-abiertos.md), y por eso no se",
+      "_nota3": "sueltan al entrenar. La forma ya esta para que el inventario",
+      "_nota4": "y el catalogo los sepan llevar.",
+      "clave": "catalizador_saber",
+      "momento": "invocacion",
+      "clase": "Saber",
+      "peso": 0
+    },
+    {
+      "clave": "catalizador_archer",
+      "momento": "invocacion",
+      "clase": "Archer",
+      "peso": 0
+    },
+    {
+      "clave": "catalizador_lancer",
+      "momento": "invocacion",
+      "clase": "Lancer",
+      "peso": 0
+    },
+    {
+      "clave": "catalizador_rider",
+      "momento": "invocacion",
+      "clase": "Rider",
+      "peso": 0
+    },
+    {
+      "clave": "catalizador_caster",
+      "momento": "invocacion",
+      "clase": "Caster",
+      "peso": 0
+    },
+    {
+      "clave": "catalizador_assassin",
+      "momento": "invocacion",
+      "clase": "Assassin",
+      "peso": 0
+    },
+    {
+      "clave": "catalizador_berserker",
+      "momento": "invocacion",
+      "clase": "Berserker",
+      "peso": 0
+    },
+    {
+      "clave": "catalizador_ruler",
+      "momento": "invocacion",
+      "clase": "Ruler",
+      "peso": 0
+    }
+  ]
+}

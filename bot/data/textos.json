@@ -1,0 +1,1526 @@
+{
+  "_nota": "Todo lo que lee el jugador. Vive en datos, no en el codigo, para que traducir o retocar una frase no sea tocar el juego. Cada clave trae una frase por idioma y los huecos entre llaves tienen que ser los mismos en todos: src/game/textos.py lo valida al cargar y revienta si falta un idioma o si un hueco no cuadra.",
+  "_estilo": "El espanol va sin acentos ni enes, como el resto del texto del bot: el registro de batalla tambien se imprime en la consola de Windows desde el simulador, y alli se escapan raro. El ingles va normal. La excepcion son las etiquetas idioma.es e idioma.en, que son los nombres de los idiomas y solo se ven en el desplegable de Discord: esas van bien escritas.",
+  "_idiomas": [
+    "es",
+    "en"
+  ],
+  "textos": {
+    "turnos.uno": {
+      "es": "{cuantos} turno",
+      "en": "{cuantos} turn"
+    },
+    "turnos.varios": {
+      "es": "{cuantos} turnos",
+      "en": "{cuantos} turns"
+    },
+    "personas.uno": {
+      "es": "{cuantos} persona",
+      "en": "{cuantos} person"
+    },
+    "personas.varios": {
+      "es": "{cuantos} personas",
+      "en": "{cuantos} people"
+    },
+    "bots.uno": {
+      "es": "{cuantos} Master de la IA",
+      "en": "{cuantos} AI Master"
+    },
+    "bots.varios": {
+      "es": "{cuantos} Masters de la IA",
+      "en": "{cuantos} AI Masters"
+    },
+    "batalla.turno": {
+      "es": "--- Turno {turno} ---",
+      "en": "--- Turn {turno} ---"
+    },
+    "batalla.no_sabe_defenderse": {
+      "es": "{nombre} no sabe defenderse y pierde el turno.",
+      "en": "{nombre} cannot defend and loses the turn."
+    },
+    "batalla.segunda_defensa_lograda": {
+      "es": "{nombre} vuelve a defender y lo logra.",
+      "en": "{nombre} defends again and holds."
+    },
+    "batalla.segunda_defensa_falla": {
+      "es": "{nombre} intenta defender dos turnos seguidos, falla y pierde el turno.",
+      "en": "{nombre} tries to defend twice in a row, fails and loses the turn."
+    },
+    "batalla.en_guardia": {
+      "es": "{nombre} se pone en guardia.",
+      "en": "{nombre} takes a defensive stance."
+    },
+    "batalla.demencia": {
+      "es": "{nombre} no distingue amigo de enemigo y se lanza contra {objetivo}.",
+      "en": "{nombre} cannot tell friend from foe and charges at {objetivo}."
+    },
+    "batalla.np_imposible": {
+      "es": "{nombre} no puede lanzar su Noble Fantasma.",
+      "en": "{nombre} cannot unleash their Noble Phantasm."
+    },
+    "batalla.np_sin_objetivo": {
+      "es": "{nombre} lanza su Noble Fantasma, pero su objetivo ya habia caido.",
+      "en": "{nombre} unleashes their Noble Phantasm, but the target had already fallen."
+    },
+    "batalla.np_liberado": {
+      "es": "{nombre} libera su Noble Fantasma.",
+      "en": "{nombre} unleashes their Noble Phantasm."
+    },
+    "batalla.ataque_no_conecta": {
+      "es": "El ataque de {nombre} no conecta: su objetivo ya habia caido. Solo suma mana.",
+      "en": "{nombre}'s attack lands on nothing: the target had already fallen. It only gains mana."
+    },
+    "batalla.esquiva_velocidad": {
+      "es": "{nombre} es demasiado rapido y esquiva el golpe.",
+      "en": "{nombre} is too fast and dodges the blow."
+    },
+    "batalla.critico": {
+      "es": "Golpe critico.",
+      "en": "Critical hit."
+    },
+    "batalla.ventaja": {
+      "es": "{clase_atacante} tiene ventaja sobre {clase_objetivo}.",
+      "en": "{clase_atacante} has the advantage over {clase_objetivo}."
+    },
+    "batalla.desventaja": {
+      "es": "{clase_atacante} esta en desventaja contra {clase_objetivo}.",
+      "en": "{clase_atacante} is at a disadvantage against {clase_objetivo}."
+    },
+    "batalla.evita_golpe": {
+      "es": "{nombre} evita el golpe por completo.",
+      "en": "{nombre} avoids the blow entirely."
+    },
+    "batalla.bloquea": {
+      "es": "{nombre} bloquea parte del golpe.",
+      "en": "{nombre} blocks part of the blow."
+    },
+    "batalla.dano": {
+      "es": "{atacante} hace {dano} de dano a {objetivo} ({vida}/{maxima}).",
+      "en": "{atacante} deals {dano} damage to {objetivo} ({vida}/{maxima})."
+    },
+    "batalla.cae": {
+      "es": "{nombre} cae.",
+      "en": "{nombre} falls."
+    },
+    "batalla.fin_con_ganador": {
+      "es": "La batalla termina. {nombre} queda en pie.",
+      "en": "The battle ends. {nombre} is left standing."
+    },
+    "batalla.fin_sin_nadie": {
+      "es": "La batalla termina sin nadie en pie.",
+      "en": "The battle ends with nobody standing."
+    },
+    "batalla.votacion": {
+      "es": "Quedan {nombres}. Cada uno elige continuar o terminar.",
+      "en": "{nombres} are left. Each one chooses to go on or to stop."
+    },
+    "batalla.todos_terminan": {
+      "es": "Todos acuerdan terminar. La batalla se cierra sin mas caidas.",
+      "en": "Everyone agrees to stop. The battle closes with nobody else falling."
+    },
+    "batalla.siguen_luchando": {
+      "es": "{nombres} decide seguir luchando.",
+      "en": "{nombres} decides to keep fighting."
+    },
+    "batalla.esperan": {
+      "es": "{nombres} queria terminar: pierde este turno y solo espera.",
+      "en": "{nombres} wanted to stop: loses this turn and only waits."
+    },
+    "habilidad.inexistente": {
+      "es": "{nombre} no tiene la habilidad {numero} y pierde el turno.",
+      "en": "{nombre} does not have skill {numero} and loses the turn."
+    },
+    "habilidad.enfriando": {
+      "es": "{nombre} intenta usar {habilidad}, pero le faltan {turnos} turnos de enfriamiento: pierde el turno.",
+      "en": "{nombre} tries to use {habilidad}, but it still has {turnos} turns of cooldown: the turn is lost."
+    },
+    "habilidad.sin_efecto_aun": {
+      "es": "{nombre} usa {habilidad}, que todavia no tiene efecto.",
+      "en": "{nombre} uses {habilidad}, which has no effect yet."
+    },
+    "habilidad.objetivo_caido": {
+      "es": "{nombre} usa {habilidad}, pero {objetivo} ya habia caido: el efecto se pierde.",
+      "en": "{nombre} uses {habilidad}, but {objetivo} had already fallen: the effect is lost."
+    },
+    "habilidad.sin_objetivo": {
+      "es": "{nombre} usa {habilidad}, pero no hay a quien darsela.",
+      "en": "{nombre} uses {habilidad}, but there is nobody to give it to."
+    },
+    "habilidad.usada": {
+      "es": "{nombre} usa {habilidad}.",
+      "en": "{nombre} uses {habilidad}."
+    },
+    "habilidad.usada_sobre": {
+      "es": "{nombre} usa {habilidad} sobre {objetivo}.",
+      "en": "{nombre} uses {habilidad} on {objetivo}."
+    },
+    "habilidad.sin_numero": {
+      "es": "habilidad {numero}",
+      "en": "skill {numero}"
+    },
+    "efecto.mana": {
+      "es": "{nombre} gana {mana} de mana ({total}).",
+      "en": "{nombre} gains {mana} mana ({total})."
+    },
+    "efecto.curar": {
+      "es": "{nombre} recupera {vida} de vida ({actual}/{maxima}).",
+      "en": "{nombre} recovers {vida} health ({actual}/{maxima})."
+    },
+    "efecto.ataque": {
+      "es": "{nombre} pega x{factor} durante {duracion}.",
+      "en": "{nombre} hits for x{factor} for {duracion}."
+    },
+    "efecto.defensa": {
+      "es": "{nombre} recibe un {porcentaje}% menos de dano durante {duracion}.",
+      "en": "{nombre} takes {porcentaje}% less damage for {duracion}."
+    },
+    "efecto.critico": {
+      "es": "{nombre} suma {puntos} puntos de probabilidad de critico durante {duracion}.",
+      "en": "{nombre} gains {puntos} points of critical chance for {duracion}."
+    },
+    "ficha.habilidad_sin_efecto": {
+      "es": "sin efecto todavia",
+      "en": "no effect yet"
+    },
+    "ficha.objetivo_uno_mismo": {
+      "es": "a si mismo",
+      "en": "on itself"
+    },
+    "ficha.objetivo_aliado": {
+      "es": "a quien elija",
+      "en": "on anyone it picks"
+    },
+    "ficha.objetivo_otro": {
+      "es": "a otro",
+      "en": "on someone else"
+    },
+    "ficha.efecto_mana": {
+      "es": "+{mana} de mana",
+      "en": "+{mana} mana"
+    },
+    "ficha.efecto_curar": {
+      "es": "cura {porcentaje}% de la vida",
+      "en": "heals {porcentaje}% of max health"
+    },
+    "ficha.efecto_ataque": {
+      "es": "pega x{factor}",
+      "en": "hits for x{factor}"
+    },
+    "ficha.efecto_defensa": {
+      "es": "-{porcentaje}% de dano recibido",
+      "en": "-{porcentaje}% damage taken"
+    },
+    "ficha.efecto_critico": {
+      "es": "+{puntos} puntos de critico",
+      "en": "+{puntos} points of critical chance"
+    },
+    "ficha.habilidad_instantanea": {
+      "es": "{que} {a_quien} (enfriamiento {enfriamiento})",
+      "en": "{que} {a_quien} (cooldown {enfriamiento})"
+    },
+    "ficha.habilidad_con_duracion": {
+      "es": "{que} {a_quien}, {duracion} (enfriamiento {enfriamiento})",
+      "en": "{que} {a_quien}, {duracion} (cooldown {enfriamiento})"
+    },
+    "npc.sombra": {
+      "es": "Sombra {numero}",
+      "en": "Shadow {numero}"
+    },
+    "guerra.ya_empezo": {
+      "es": "la guerra ya empezo",
+      "en": "the war has already started"
+    },
+    "guerra.ya_inscrito": {
+      "es": "ya estas inscrito en esta guerra",
+      "en": "you are already in this war"
+    },
+    "guerra.llena": {
+      "es": "esta guerra ya tiene sus {maximo} Masters",
+      "en": "this war already has its {maximo} Masters"
+    },
+    "guerra.faltan_masters": {
+      "es": "faltan {faltan} Masters para empezar",
+      "en": "{faltan} more Masters are needed to start"
+    },
+    "guerra.sin_servant": {
+      "es": "{nombre} no tiene Servant invocado",
+      "en": "{nombre} has no summoned Servant"
+    },
+    "guerra.master_fuera": {
+      "es": "ese Master no esta en la guerra",
+      "en": "that Master is not in this war"
+    },
+    "guerra.sin_humanos": {
+      "es": "una guerra necesita al menos una persona de verdad",
+      "en": "a war needs at least one real person"
+    },
+    "guerra.nombre_bot": {
+      "es": "Master IA {numero}",
+      "en": "AI Master {numero}"
+    },
+    "guerra.fuera_de_preparacion": {
+      "es": "los ataques se declaran en la preparacion",
+      "en": "attacks are declared during the preparation window"
+    },
+    "guerra.no_a_ti_mismo": {
+      "es": "no puedes atacarte a ti mismo",
+      "en": "you cannot attack yourself"
+    },
+    "fase.lobby": {
+      "es": "lobby",
+      "en": "lobby"
+    },
+    "fase.preparacion": {
+      "es": "preparacion",
+      "en": "preparation"
+    },
+    "fase.formacion": {
+      "es": "formacion",
+      "en": "matchmaking"
+    },
+    "fase.listos": {
+      "es": "listos",
+      "en": "ready check"
+    },
+    "fase.batalla": {
+      "es": "batalla",
+      "en": "battle"
+    },
+    "fase.cierre": {
+      "es": "cierre",
+      "en": "closing"
+    },
+    "fase.terminada": {
+      "es": "terminada",
+      "en": "finished"
+    },
+    "bot.ya_hay_guerra": {
+      "es": "Ya hay una guerra abierta en este canal.",
+      "en": "There is already a war open in this channel."
+    },
+    "bot.guerra_abierta": {
+      "es": "**Guerra abierta.** Preparacion: {preparacion}.\nHacen falta {minimo} Masters. Hay 1. Usen `/unirse-a-guerra`.\nCon {minimo_grial} personas o mas, el que queda en pie se lleva el Grial. Con menos, `/empezar-guerra` llena los cupos con la IA y se juega sin Grial.",
+      "en": "**War open.** Preparation: {preparacion}.\n{minimo} Masters are needed. There is 1. Use `/join-war`.\nWith {minimo_grial} people or more, the last one standing takes the Grail. With fewer, `/start-war` fills the slots with the AI and the war is played without a Grail."
+    },
+    "bot.empezada_con_bots": {
+      "es": "{personas} y {bots}. Esta guerra **no entrega el Grial**: para eso hacen falta {minimo_grial} personas.",
+      "en": "{personas} and {bots}. This war **does not award the Grail**: that needs {minimo_grial} people."
+    },
+    "bot.empezada_con_grial": {
+      "es": "{personas} y {bots}. **El Grial esta en juego.**",
+      "en": "{personas} and {bots}. **The Grail is at stake.**"
+    },
+    "bot.grial_en_juego": {
+      "es": "El Grial esta en juego: juegan {personas}.",
+      "en": "The Grail is at stake: {personas} playing."
+    },
+    "bot.sin_grial": {
+      "es": "Sin Grial: juega {personas} y hacen falta {minimo_grial}.",
+      "en": "No Grail: {personas} playing and {minimo_grial} are needed."
+    },
+    "bot.solo_el_creador": {
+      "es": "Solo quien abrio la guerra puede empezarla con bots.",
+      "en": "Only whoever opened the war can start it with bots."
+    },
+    "cmd.crear.nombre": {
+      "es": "crear-guerra",
+      "en": "create-war"
+    },
+    "cmd.crear.ayuda": {
+      "es": "Abre el lobby de una guerra",
+      "en": "Opens the lobby for a war"
+    },
+    "cmd.unirse.nombre": {
+      "es": "unirse-a-guerra",
+      "en": "join-war"
+    },
+    "cmd.unirse.ayuda": {
+      "es": "Te inscribe en la guerra del canal",
+      "en": "Signs you up for the war in this channel"
+    },
+    "cmd.empezar.nombre": {
+      "es": "empezar-guerra",
+      "en": "start-war"
+    },
+    "cmd.empezar.ayuda": {
+      "es": "Empieza ya, llenando los cupos que falten con la IA",
+      "en": "Starts now, filling the empty slots with the AI"
+    },
+    "cmd.estado.nombre": {
+      "es": "estado-guerra",
+      "en": "war-status"
+    },
+    "cmd.estado.ayuda": {
+      "es": "Muestra como va la guerra",
+      "en": "Shows how the war is going"
+    },
+    "cmd.estadisticas.nombre": {
+      "es": "estadisticas",
+      "en": "stats"
+    },
+    "cmd.estadisticas.ayuda": {
+      "es": "Tu Servant y tu menu de acciones",
+      "en": "Your Servant and your action menu"
+    },
+    "cmd.cuenta.nombre": {
+      "es": "mi-cuenta",
+      "en": "my-account"
+    },
+    "cmd.cuenta.ayuda": {
+      "es": "Tus griales y tus guerras ganadas, dentro o fuera de una guerra",
+      "en": "Your grails and wars won, inside or outside a war"
+    },
+    "cmd.entrenar.nombre": {
+      "es": "entrenar",
+      "en": "train"
+    },
+    "cmd.entrenar.ayuda": {
+      "es": "Pelea uno de tus 4 combates de entrenamiento",
+      "en": "Fights one of your 4 training battles"
+    },
+    "cmd.opcion.preparacion": {
+      "es": "preparacion",
+      "en": "preparation"
+    },
+    "cmd.opcion.preparacion.ayuda": {
+      "es": "Tiempo de preparacion antes de los combates",
+      "en": "Preparation time before the battles"
+    },
+    "cmd.opcion.idioma": {
+      "es": "idioma",
+      "en": "language"
+    },
+    "cmd.opcion.idioma.ayuda": {
+      "es": "En que idioma se juega esta guerra",
+      "en": "Which language this war is played in"
+    },
+    "idioma.es": {
+      "es": "ES (español)",
+      "en": "ES (español)"
+    },
+    "idioma.en": {
+      "es": "EN (english)",
+      "en": "EN (english)"
+    },
+    "preparacion.30m": {
+      "es": "30 minutos",
+      "en": "30 minutes"
+    },
+    "preparacion.1h": {
+      "es": "1 hora",
+      "en": "1 hour"
+    },
+    "preparacion.24h": {
+      "es": "24 horas",
+      "en": "24 hours"
+    },
+    "bot.no_hay_guerra_abierta": {
+      "es": "No hay ninguna guerra abierta aqui. Usa `/crear-guerra`.",
+      "en": "There is no war open here. Use `/create-war`."
+    },
+    "bot.no_hay_guerra": {
+      "es": "No hay ninguna guerra en este canal.",
+      "en": "There is no war in this channel."
+    },
+    "bot.se_inscribe": {
+      "es": "{nombre} se inscribe. {inscritos}/{minimo}.",
+      "en": "{nombre} joins. {inscritos}/{minimo}."
+    },
+    "bot.guerra_comienza": {
+      "es": "\n\n**La guerra comienza.** Siete Servants han sido llamados; cada Master invoca al suyo cuando quiera con `/invocar` o con su menu.\nNadie sabe que Servant lleva nadie: se descubre peleando.\n\nDia 1. Preparacion: {minutos} minutos. Al cerrarse el dia, el ritual se completa solo por quien no haya invocado.",
+      "en": "\n\n**The war begins.** Seven Servants have been called; each Master summons theirs whenever they want with `/summon` or from their menu.\nNobody knows which Servant anyone has: you find out by fighting.\n\nDay 1. Preparation: {minutos} minutes. When the day closes, the ritual completes itself for whoever has not summoned."
+    },
+    "bot.aviso_menu": {
+      "es": "{menciones}\nPulsa el boton para abrir tu menu. Solo lo ves tu.",
+      "en": "{menciones}\nPress the button to open your menu. Only you can see it."
+    },
+    "menu.abrir": {
+      "es": "Abrir mi menu",
+      "en": "Open my menu"
+    },
+    "menu.cabecera": {
+      "es": "**{servant}** ({clase}), nivel {nivel}. Dia {dia}. Elige:",
+      "en": "**{servant}** ({clase}), level {nivel}. Day {dia}. Choose:"
+    },
+    "menu.estadisticas": {
+      "es": "Mis estadisticas",
+      "en": "My stats"
+    },
+    "menu.entrenar": {
+      "es": "Entrenar ({restantes})",
+      "en": "Train ({restantes})"
+    },
+    "menu.estado": {
+      "es": "Estado de la guerra",
+      "en": "War status"
+    },
+    "menu.inventario": {
+      "es": "Inventario ({cuantos})",
+      "en": "Inventory ({cuantos})"
+    },
+    "menu.no_estas": {
+      "es": "No estas en esta guerra.",
+      "en": "You are not in this war."
+    },
+    "menu.caducado": {
+      "es": "Este menu ya caduco. Abre otro con `/estadisticas` o con el boton del canal.",
+      "en": "This menu has expired. Open another one with `/stats` or the button in the channel."
+    },
+    "bot.lobby_abierto": {
+      "es": "Lobby abierto: {inscritos}/{minimo} Masters.",
+      "en": "Lobby open: {inscritos}/{minimo} Masters."
+    },
+    "bot.estado_cabecera": {
+      "es": "**Dia {dia}** ({fase})",
+      "en": "**Day {dia}** ({fase})"
+    },
+    "bot.estado_linea": {
+      "es": "{marca}{master}{marca} - {servant} nivel {nivel} ({clase}) | derrotas {derrotas}/{para_eliminar} | sellos {sellos}",
+      "en": "{marca}{master}{marca} - {servant} level {nivel} ({clase}) | losses {derrotas}/{para_eliminar} | seals {sellos}"
+    },
+    "bot.sin_servant": {
+      "es": "No tienes un Servant invocado en este canal.",
+      "en": "You have no Servant summoned in this channel."
+    },
+    "bot.ficha": {
+      "es": "**{servant}** ({clase}) - nivel {nivel}\nVida {vida} | Ataque {ataque} | Velocidad {velocidad}\nXP {xp}/{xp_para_subir}\nNoble Fantasma: {noble_fantasma}\nHabilidades ({desbloqueadas}/3):{habilidades}\nRasgo: {rasgo}\nCombates NPC hoy: {intentos}/{por_dia} (derrotas {derrotas_npc})",
+      "en": "**{servant}** ({clase}) - level {nivel}\nHealth {vida} | Attack {ataque} | Speed {velocidad}\nXP {xp}/{xp_para_subir}\nNoble Phantasm: {noble_fantasma}\nSkills ({desbloqueadas}/3):{habilidades}\nTrait: {rasgo}\nNPC fights today: {intentos}/{por_dia} (losses {derrotas_npc})"
+    },
+    "bot.ficha_habilidad": {
+      "es": "  {numero}. **{nombre}**: {descripcion}",
+      "en": "  {numero}. **{nombre}**: {descripcion}"
+    },
+    "bot.ficha_habilidad_bloqueada": {
+      "es": "  {numero}. 🔒 {nombre}: {descripcion} — al nivel {nivel}",
+      "en": "  {numero}. 🔒 {nombre}: {descripcion} — at level {nivel}"
+    },
+    "ficha.noble_fantasma": {
+      "es": "**{nombre}** (rango {rango})\n  {efecto}",
+      "en": "**{nombre}** (rank {rango})\n  {efecto}"
+    },
+    "ficha.noble_fantasma_simple": {
+      "es": "**{nombre}**\n  {efecto}",
+      "en": "**{nombre}**\n  {efecto}"
+    },
+    "ficha.np_efecto": {
+      "es": "x{multiplicador} de dano a un objetivo, cuesta {costo} de mana y se puede repetir",
+      "en": "x{multiplicador} damage to one target, costs {costo} mana and can be repeated"
+    },
+    "ficha.noble_fantasma_oculto": {
+      "es": "**Nombre desconocido**\n  {efecto}",
+      "en": "**Name unknown**\n  {efecto}"
+    },
+    "ficha.sin_noble_fantasma": {
+      "es": "ninguno",
+      "en": "none"
+    },
+    "bot.ficha_sin_habilidades": {
+      "es": " ninguna todavia",
+      "en": " none yet"
+    },
+    "bot.ficha_sin_rasgo": {
+      "es": "ninguno",
+      "en": "none"
+    },
+    "bot.no_en_guerra": {
+      "es": "No estas en una guerra activa aqui.",
+      "en": "You are not in an active war here."
+    },
+    "bot.npc_solo_preparacion": {
+      "es": "Los combates NPC solo se pelean durante la preparacion.",
+      "en": "NPC fights only happen during the preparation window."
+    },
+    "bot.npc_agotados": {
+      "es": "Ya gastaste tus {por_dia} combates de hoy.",
+      "en": "You already used your {por_dia} fights for today."
+    },
+    "bot.npc_victoria": {
+      "es": "**Victoria** contra {rival}. +{xp} XP.",
+      "en": "**Victory** against {rival}. +{xp} XP."
+    },
+    "bot.npc_objeto": {
+      "es": " Objeto obtenido: {objeto}.",
+      "en": " Item obtained: {objeto}."
+    },
+    "bot.npc_subida": {
+      "es": " Sube a nivel {nivel}.",
+      "en": " Levels up to {nivel}."
+    },
+    "bot.npc_derrota": {
+      "es": "**Derrota** contra {rival}. Empezaras la batalla de hoy con {vida} de vida.",
+      "en": "**Defeat** against {rival}. You will start today's battle with {vida} health."
+    },
+    "bot.idioma_cambiado": {
+      "es": "Esta guerra se jugara en espanol.",
+      "en": "This war will be played in English."
+    },
+    "guerra.todavia_no_empezo": {
+      "es": "la guerra todavia no ha empezado",
+      "en": "the war has not started yet"
+    },
+    "guerra.ya_invocaste": {
+      "es": "ya invocaste a tu Servant",
+      "en": "you already summoned your Servant"
+    },
+    "guerra.sin_servants_libres": {
+      "es": "no quedan Servants por repartir",
+      "en": "there are no Servants left to hand out"
+    },
+    "guerra.invoca_primero": {
+      "es": "invoca a tu Servant antes de atacar",
+      "en": "summon your Servant before attacking"
+    },
+    "cmd.invocar.nombre": {
+      "es": "invocar",
+      "en": "summon"
+    },
+    "cmd.invocar.ayuda": {
+      "es": "Invoca a tu Servant para esta guerra",
+      "en": "Summons your Servant for this war"
+    },
+    "menu.cabecera_sin_invocar": {
+      "es": "Dia {dia}. Todavia no has invocado a tu Servant. Hazlo cuando quieras: al cerrarse el dia 1, el ritual se completa solo.",
+      "en": "Day {dia}. You have not summoned your Servant yet. Do it whenever you want: when day 1 closes, the ritual completes itself."
+    },
+    "menu.invocar": {
+      "es": "Invocar mi Servant",
+      "en": "Summon my Servant"
+    },
+    "bot.invocacion_hecha": {
+      "es": "Responde a tu llamada **{servant}** ({clase}).\nTienes {sellos} Sellos de Comando.",
+      "en": "**{servant}** ({clase}) answers your call.\nYou have {sellos} Command Seals."
+    },
+    "bot.invocacion_publica": {
+      "es": "**{master}** ha invocado a su Servant. Faltan {faltan}.",
+      "en": "**{master}** has summoned their Servant. {faltan} to go."
+    },
+    "bot.invocacion_ultima": {
+      "es": "**{master}** ha invocado a su Servant. Ya estan los siete.",
+      "en": "**{master}** has summoned their Servant. All seven are in."
+    },
+    "bot.ya_invocaste": {
+      "es": "Ya tienes a **{servant}** invocado.",
+      "en": "You already have **{servant}** summoned."
+    },
+    "bot.invoca_primero": {
+      "es": "Primero invoca a tu Servant.",
+      "en": "Summon your Servant first."
+    },
+    "bot.estado_linea_sin_invocar": {
+      "es": "{master} - sin invocar todavia",
+      "en": "{master} - has not summoned yet"
+    },
+    "cmd.batallas.nombre": {
+      "es": "empezar-batallas",
+      "en": "start-battles"
+    },
+    "cmd.batallas.ayuda": {
+      "es": "Acaba la preparacion y empiezan las batallas (solo quien abrio la guerra)",
+      "en": "Ends preparation and the battles begin (war creator only)"
+    },
+    "menu.conocidos": {
+      "es": "Servants que conoces",
+      "en": "Servants you know"
+    },
+    "conocidos.elige": {
+      "es": "Los Servants con los que ya has peleado:",
+      "en": "The Servants you have already fought:"
+    },
+    "conocidos.placeholder": {
+      "es": "Elige un Servant",
+      "en": "Pick a Servant"
+    },
+    "conocidos.todavia_ninguno": {
+      "es": "Todavia no has visto el Servant de nadie. Se aprenden peleando.",
+      "en": "You have not seen anyone's Servant yet. You learn them by fighting."
+    },
+    "conocidos.no_lo_conoces": {
+      "es": "No has peleado con ese Servant.",
+      "en": "You have not fought that Servant."
+    },
+    "conocidos.ficha": {
+      "es": "**{servant}** ({clase}), el Servant de {master}.",
+      "en": "**{servant}** ({clase}), {master}'s Servant."
+    },
+    "cmd.terminar.nombre": {
+      "es": "terminar-guerra",
+      "en": "end-war"
+    },
+    "cmd.terminar.ayuda": {
+      "es": "Cierra la guerra sin ganador (solo quien abrio la guerra)",
+      "en": "Closes the war with no winner (war creator only)"
+    },
+    "bot.solo_el_creador_termina": {
+      "es": "Solo quien abrio la guerra puede terminarla.",
+      "en": "Only whoever opened the war can end it."
+    },
+    "terminar.pregunta": {
+      "es": "Vas a terminar la guerra. Quedan {en_pie} en pie y no va a ganar ninguno: no hay Grial y esto no se deshace. Seguro?",
+      "en": "You are about to end the war. {en_pie} are still standing and none of them will win: no Grail, and this cannot be undone. Are you sure?"
+    },
+    "terminar.confirmar": {
+      "es": "Terminar la guerra",
+      "en": "End the war"
+    },
+    "terminar.mejor_no": {
+      "es": "Mejor no",
+      "en": "Never mind"
+    },
+    "terminar.hecho": {
+      "es": "Guerra terminada.",
+      "en": "War ended."
+    },
+    "terminar.sigue": {
+      "es": "La guerra sigue.",
+      "en": "The war goes on."
+    },
+    "terminar.ya_acabo": {
+      "es": "Esta guerra ya se acabo.",
+      "en": "This war is already over."
+    },
+    "bot.guerra_terminada": {
+      "es": "La guerra se termina en el dia {dia}, con {en_pie} en pie. Nadie se lleva el Grial. Para jugar otra, `/crear-guerra`.",
+      "en": "The war ends on day {dia}, with {en_pie} still standing. Nobody takes the Grail. For another one, `/create-war`."
+    },
+    "menu.batallas": {
+      "es": "Empezar las batallas",
+      "en": "Start the battles"
+    },
+    "bot.no_se_puede_cerrar": {
+      "es": "Ahora no se pueden empezar las batallas.",
+      "en": "The battles cannot be started right now."
+    },
+    "bot.cierre_cabecera": {
+      "es": "**La preparacion del dia {dia} se cierra.**",
+      "en": "**Preparation for day {dia} is over.**"
+    },
+    "bot.cierre_aviso_ia": {
+      "es": "_Las batallas por turnos todavia no se juegan en Discord: las resuelve la IA._",
+      "en": "_Turn-by-turn battles are not playable in Discord yet: the AI resolves them._"
+    },
+    "bot.cierre_invocados": {
+      "es": "El ritual se completa por: {nombres}.",
+      "en": "The ritual completes itself for: {nombres}."
+    },
+    "bot.cierre_sin_batallas": {
+      "es": "Nadie ataco a nadie, asi que el dia pasa sin batallas.",
+      "en": "Nobody attacked anybody, so the day passes with no battles."
+    },
+    "bot.cierre_batalla": {
+      "es": "**Batalla:** {grupo}",
+      "en": "**Battle:** {grupo}"
+    },
+    "bot.cierre_caido": {
+      "es": "Cae **{master}**: {derrotas} de {para_eliminar} derrotas.",
+      "en": "**{master}** falls: {derrotas} of {para_eliminar} defeats."
+    },
+    "bot.cierre_eliminado": {
+      "es": "Cae **{master}** y queda **eliminado** de la guerra.",
+      "en": "**{master}** falls and is **out** of the war."
+    },
+    "bot.cierre_empate": {
+      "es": "La batalla se alarga sin que caiga nadie.",
+      "en": "The battle drags on with nobody falling."
+    },
+    "bot.cierre_descansan": {
+      "es": "Descansan: {nombres}.",
+      "en": "Resting: {nombres}."
+    },
+    "bot.cierre_dia_nuevo": {
+      "es": "**Empieza el dia {dia}.** Preparacion: {minutos} minutos.",
+      "en": "**Day {dia} begins.** Preparation: {minutos} minutes."
+    },
+    "bot.cierre_gana_el_grial": {
+      "es": "**{master}** se queda en pie y **gana el Grial**.",
+      "en": "**{master}** is the last one standing and **wins the Grail**."
+    },
+    "bot.cierre_gana_sin_grial": {
+      "es": "**{master}** se queda en pie y gana la guerra, pero sin Grial: hacen falta {minimo_grial} personas de verdad.",
+      "en": "**{master}** is the last one standing and wins the war, but with no Grail: {minimo_grial} real people are needed."
+    },
+    "bot.cierre_terminada": {
+      "es": "**La guerra termina.**",
+      "en": "**The war is over.**"
+    },
+    "menu.listo": {
+      "es": "Ya acabe mi dia",
+      "en": "I am done for today"
+    },
+    "menu.listo_hecho": {
+      "es": "Listo ✓",
+      "en": "Ready ✓"
+    },
+    "bot.listo_hecho": {
+      "es": "Apuntado: ya acabaste tu dia. Puedes seguir mirando, pero no entrenar ni cambiar tu ataque.",
+      "en": "Noted: you are done for today. You can keep looking around, but not train or change your attack."
+    },
+    "bot.listo_ya_estabas": {
+      "es": "Ya habias dicho que acabaste tu dia.",
+      "en": "You had already said you were done for today."
+    },
+    "bot.listo_publico": {
+      "es": "**{master}** ya acabo su dia. Faltan {faltan}.",
+      "en": "**{master}** is done for today. Waiting on {faltan}."
+    },
+    "bot.listo_todos": {
+      "es": "**{master}** ya acabo su dia. Ya estan todos: quien abrio la guerra puede empezar las batallas.",
+      "en": "**{master}** is done for today. Everyone is ready: the war creator can start the battles."
+    },
+    "bot.cierre_faltan_listos": {
+      "es": "Todavia no. Faltan por acabar su dia: {nombres}.",
+      "en": "Not yet. Still finishing their day: {nombres}."
+    },
+    "bot.listo_no_entrenas": {
+      "es": "Ya dijiste que acabaste tu dia.",
+      "en": "You already said you were done for today."
+    },
+    "bot.cierre_por_plazo": {
+      "es": "**Se agota la ventana del dia {dia}.** El dia se cierra sin esperar a nadie.",
+      "en": "**The day {dia} window is up.** The day closes without waiting for anyone."
+    },
+    "bot.estado_plazo": {
+      "es": "Quedan {minutos} min de preparacion.",
+      "en": "{minutos} min of preparation left."
+    },
+    "bot.estado_plazo_poco": {
+      "es": "La preparacion se acaba en menos de un minuto.",
+      "en": "Preparation ends in less than a minute."
+    },
+    "bot.estado_linea_oculto": {
+      "es": "{marca}{master}{marca} - Servant desconocido | derrotas {derrotas}/{para_eliminar}",
+      "en": "{marca}{master}{marca} - unknown Servant | losses {derrotas}/{para_eliminar}"
+    },
+    "bot.estado_a_ciegas": {
+      "es": "_Solo ves el Servant de quien hayas peleado. Atacar a quien no conoces es una apuesta._",
+      "en": "_You only see the Servant of those you have fought. Attacking someone you do not know is a gamble._"
+    },
+    "menu.ultima_batalla": {
+      "es": "Ver mi ultima batalla",
+      "en": "See my last battle"
+    },
+    "bot.sin_registro": {
+      "es": "Todavia no has peleado ninguna batalla.",
+      "en": "You have not fought any battle yet."
+    },
+    "bot.registro_de_batalla": {
+      "es": "**Tu batalla del dia {dia}:**\n```\n{registro}\n```",
+      "en": "**Your battle on day {dia}:**\n```\n{registro}\n```"
+    },
+    "bot.cierre_registro_privado": {
+      "es": "_El detalle de cada batalla solo lo ven quienes pelearon, en su menu: lo que se dice ahi delata a los Servants._",
+      "en": "_Only those who fought see each battle's details, from their menu: what is said there gives the Servants away._"
+    },
+    "menu.planear": {
+      "es": "Planear ataque",
+      "en": "Plan attack"
+    },
+    "menu.planear_a": {
+      "es": "Atacas a {master}",
+      "en": "Attacking {master}"
+    },
+    "bot.planear_elige": {
+      "es": "**A quien atacas hoy?** Solo lo sabras tu hasta que empiecen las batallas.\nDe quien no hayas peleado todavia no sabes el Servant: elegir a ciegas es parte del juego.",
+      "en": "**Who are you attacking today?** Only you will know until the battles begin.\nYou do not know the Servant of anyone you have not fought yet: choosing blind is part of the game."
+    },
+    "bot.planear_placeholder": {
+      "es": "Elige a tu rival",
+      "en": "Choose your rival"
+    },
+    "bot.planear_hecho": {
+      "es": "Atacaras a **{master}**. Puedes cambiar de objetivo hasta que se cierre el dia.",
+      "en": "You will attack **{master}**. You can change target until the day closes."
+    },
+    "bot.planear_opcion_conocido": {
+      "es": "{servant} nivel {nivel} ({clase})",
+      "en": "{servant} level {nivel} ({clase})"
+    },
+    "bot.planear_opcion_oculto": {
+      "es": "Servant desconocido - {derrotas}/{para_eliminar} derrotas",
+      "en": "Unknown Servant - {derrotas}/{para_eliminar} defeats"
+    },
+    "bot.planear_sin_rivales": {
+      "es": "No queda nadie a quien atacar.",
+      "en": "There is no one left to attack."
+    },
+    "bot.planear_invoca_primero": {
+      "es": "Sin Servant no hay con que atacar: invoca primero.",
+      "en": "Without a Servant there is nothing to attack with: summon first."
+    },
+    "bot.planear_listo": {
+      "es": "Ya dijiste que acabaste tu dia: el ataque que declaraste es el que vale.",
+      "en": "You already said your day was over: the attack you declared is the one that counts."
+    },
+    "bot.planear_fuera": {
+      "es": "Ahora no se pueden declarar ataques.",
+      "en": "Attacks cannot be declared right now."
+    },
+    "combate.abrir": {
+      "es": "Abrir mi combate",
+      "en": "Open my battle"
+    },
+    "combate.aviso": {
+      "es": "{menciones} empiezan las batallas del dia {dia}. Cada quien abre la suya en privado: las decisiones de un turno son secretas y simultaneas.",
+      "en": "{menciones} the day {dia} battles begin. Each of you opens your own in private: a turn's choices are secret and simultaneous."
+    },
+    "combate.sin_combate": {
+      "es": "No estas peleando en ninguna batalla ahora mismo.",
+      "en": "You are not fighting in any battle right now."
+    },
+    "combate.cabecera": {
+      "es": "**Batalla del dia {dia}** - turno {turno}\n{yo}\n{rivales}",
+      "en": "**Day {dia} battle** - turn {turno}\n{yo}\n{rivales}"
+    },
+    "combate.yo": {
+      "es": "Tu {servant} ({clase}): {vida}/{maxima} de vida, {mana}/{costo} de mana",
+      "en": "Your {servant} ({clase}): {vida}/{maxima} HP, {mana}/{costo} mana"
+    },
+    "combate.rival": {
+      "es": "{master} - {servant} ({clase}): {vida}/{maxima} de vida",
+      "en": "{master} - {servant} ({clase}): {vida}/{maxima} HP"
+    },
+    "combate.rival_caido": {
+      "es": "{master} - {servant} ({clase}): caido",
+      "en": "{master} - {servant} ({clase}): down"
+    },
+    "combate.esperando": {
+      "es": "Esperando a {nombres}. Pulsa el boton de refrescar cuando se resuelva el turno.",
+      "en": "Waiting for {nombres}. Press refresh once the turn resolves."
+    },
+    "combate.te_toca": {
+      "es": "Te toca elegir.",
+      "en": "Your choice."
+    },
+    "combate.ya_decidiste": {
+      "es": "Ya elegiste este turno.",
+      "en": "You already chose this turn."
+    },
+    "combate.terminada": {
+      "es": "Tu batalla acabo.",
+      "en": "Your battle is over."
+    },
+    "combate.esperas_el_turno": {
+      "es": "Te retiraste de la pelea: este turno solo esperas.",
+      "en": "You pulled back: this turn you only wait."
+    },
+    "combate.boton_atacar": {
+      "es": "Atacar",
+      "en": "Attack"
+    },
+    "combate.boton_defender": {
+      "es": "Defenderse",
+      "en": "Defend"
+    },
+    "combate.boton_habilidad": {
+      "es": "Habilidad",
+      "en": "Skill"
+    },
+    "combate.boton_np": {
+      "es": "Noble Fantasma",
+      "en": "Noble Phantasm"
+    },
+    "combate.boton_refrescar": {
+      "es": "Refrescar",
+      "en": "Refresh"
+    },
+    "combate.boton_registro": {
+      "es": "Ver el combate",
+      "en": "View the log"
+    },
+    "combate.boton_seguir": {
+      "es": "Sigo peleando",
+      "en": "Keep fighting"
+    },
+    "combate.boton_parar": {
+      "es": "Me retiro",
+      "en": "Pull back"
+    },
+    "combate.elige_objetivo": {
+      "es": "A quien?",
+      "en": "Against whom?"
+    },
+    "combate.placeholder_objetivo": {
+      "es": "Elige un rival",
+      "en": "Pick a rival"
+    },
+    "combate.elige_habilidad": {
+      "es": "Que habilidad usas? Usarla te cuesta el turno entero.",
+      "en": "Which skill? Using one costs you the whole turn."
+    },
+    "combate.placeholder_habilidad": {
+      "es": "Elige una habilidad",
+      "en": "Pick a skill"
+    },
+    "combate.habilidad_sobre": {
+      "es": "A quien le das {habilidad}?",
+      "en": "Who gets {habilidad}?"
+    },
+    "combate.yo_mismo": {
+      "es": "Yo mismo",
+      "en": "Myself"
+    },
+    "combate.no_te_toca": {
+      "es": "Ahora no te toca decidir nada.",
+      "en": "There is nothing for you to decide right now."
+    },
+    "combate.no_defiende": {
+      "es": "{servant} no sabe defenderse.",
+      "en": "{servant} does not know how to defend."
+    },
+    "combate.np_no_listo": {
+      "es": "Te faltan {faltan} de mana para liberar el Noble Fantasma.",
+      "en": "You need {faltan} more mana to release the Noble Phantasm."
+    },
+    "combate.sin_habilidades": {
+      "es": "No tienes ninguna habilidad lista: o estan enfriandose o aun no las has desbloqueado.",
+      "en": "You have no skill ready: they are cooling down or not unlocked yet."
+    },
+    "combate.decidido_atacar": {
+      "es": "Atacaras a {master}.",
+      "en": "You will attack {master}."
+    },
+    "combate.decidido_defender": {
+      "es": "Te defenderas este turno.",
+      "en": "You will defend this turn."
+    },
+    "combate.decidido_habilidad": {
+      "es": "Usaras {habilidad} sobre {objetivo}.",
+      "en": "You will use {habilidad} on {objetivo}."
+    },
+    "combate.decidido_np": {
+      "es": "Liberaras tu Noble Fantasma sobre {master}.",
+      "en": "You will release your Noble Phantasm on {master}."
+    },
+    "combate.votacion": {
+      "es": "Cayo alguien y quedais en pie {nombres}. La batalla solo sigue si alguien quiere seguir.",
+      "en": "Someone fell and {nombres} are still standing. The battle only goes on if someone wants it to."
+    },
+    "combate.decidido_seguir": {
+      "es": "Sigues peleando.",
+      "en": "You keep fighting."
+    },
+    "combate.decidido_parar": {
+      "es": "Te retiras. Si nadie quiere seguir, la batalla acaba aqui.",
+      "en": "You pull back. If nobody wants to go on, the battle ends here."
+    },
+    "combate.turno_resuelto": {
+      "es": "**Turno resuelto**\n```\n{registro}\n```",
+      "en": "**Turn resolved**\n```\n{registro}\n```"
+    },
+    "combate.registro": {
+      "es": "```\n{registro}\n```",
+      "en": "```\n{registro}\n```"
+    },
+    "combate.sin_nada_nuevo": {
+      "es": "Todavia no se ha resuelto el turno.",
+      "en": "The turn has not resolved yet."
+    },
+    "bot.combates_abiertos": {
+      "es": "Las batallas del dia {dia} estan en marcha: {cuantas}. Nadie mira las decisiones de nadie.",
+      "en": "The day {dia} battles are under way: {cuantas}. Nobody sees anyone else's choices."
+    },
+    "bot.combates_resueltos_solos": {
+      "es": "Las batallas sin personas dentro las resolvio la IA.",
+      "en": "The battles with no people in them were settled by the AI."
+    },
+    "objeto.piedra_furia.nombre": {
+      "es": "Piedra de furia",
+      "en": "Rage stone"
+    },
+    "objeto.piedra_furia.desc": {
+      "es": "Tu Servant pega un {valor}% mas en su siguiente ataque.",
+      "en": "Your Servant hits {valor}% harder on its next attack."
+    },
+    "objeto.escama_guardian.nombre": {
+      "es": "Escama de guardian",
+      "en": "Guardian scale"
+    },
+    "objeto.escama_guardian.desc": {
+      "es": "Tu Servant recibe un {valor}% menos de dano durante 3 turnos.",
+      "en": "Your Servant takes {valor}% less damage for 3 turns."
+    },
+    "objeto.ojo_certero.nombre": {
+      "es": "Ojo certero",
+      "en": "Keen eye"
+    },
+    "objeto.ojo_certero.desc": {
+      "es": "Tu Servant suma {valor} puntos de critico durante 3 turnos.",
+      "en": "Your Servant gains {valor} points of crit chance for 3 turns."
+    },
+    "objeto.gema_mana.nombre": {
+      "es": "Gema de mana",
+      "en": "Mana gem"
+    },
+    "objeto.gema_mana.desc": {
+      "es": "Tu Servant gana {valor} de mana al momento.",
+      "en": "Your Servant gains {valor} mana right away."
+    },
+    "objeto.elixir.nombre": {
+      "es": "Elixir",
+      "en": "Elixir"
+    },
+    "objeto.elixir.desc": {
+      "es": "Tu Servant recupera un {valor}% de su vida maxima.",
+      "en": "Your Servant recovers {valor}% of its maximum health."
+    },
+    "objeto.tomo_saber.nombre": {
+      "es": "Tomo de saber",
+      "en": "Tome of lore"
+    },
+    "objeto.tomo_saber.desc": {
+      "es": "Tu Servant gana {valor} de experiencia.",
+      "en": "Your Servant gains {valor} experience."
+    },
+    "objeto.vendaje.nombre": {
+      "es": "Vendaje",
+      "en": "Bandages"
+    },
+    "objeto.vendaje.desc": {
+      "es": "Borra las derrotas de hoy contra los NPC: vas a la batalla con la vida entera.",
+      "en": "Clears today's losses against the NPCs: you enter the battle at full health."
+    },
+    "objeto.reloj_arena.nombre": {
+      "es": "Reloj de arena",
+      "en": "Hourglass"
+    },
+    "objeto.reloj_arena.desc": {
+      "es": "Te da un combate de entrenamiento mas, por encima de los 4 del dia.",
+      "en": "Gives you one more training fight, beyond the 4 of the day."
+    },
+    "objeto.catalizador_saber.nombre": {
+      "es": "Catalizador: Saber",
+      "en": "Catalyst: Saber"
+    },
+    "objeto.catalizador_saber.desc": {
+      "es": "Apunta tu invocacion a la clase Saber.",
+      "en": "Points your summon at the Saber class."
+    },
+    "objeto.catalizador_archer.nombre": {
+      "es": "Catalizador: Archer",
+      "en": "Catalyst: Archer"
+    },
+    "objeto.catalizador_archer.desc": {
+      "es": "Apunta tu invocacion a la clase Archer.",
+      "en": "Points your summon at the Archer class."
+    },
+    "objeto.catalizador_lancer.nombre": {
+      "es": "Catalizador: Lancer",
+      "en": "Catalyst: Lancer"
+    },
+    "objeto.catalizador_lancer.desc": {
+      "es": "Apunta tu invocacion a la clase Lancer.",
+      "en": "Points your summon at the Lancer class."
+    },
+    "objeto.catalizador_rider.nombre": {
+      "es": "Catalizador: Rider",
+      "en": "Catalyst: Rider"
+    },
+    "objeto.catalizador_rider.desc": {
+      "es": "Apunta tu invocacion a la clase Rider.",
+      "en": "Points your summon at the Rider class."
+    },
+    "objeto.catalizador_caster.nombre": {
+      "es": "Catalizador: Caster",
+      "en": "Catalyst: Caster"
+    },
+    "objeto.catalizador_caster.desc": {
+      "es": "Apunta tu invocacion a la clase Caster.",
+      "en": "Points your summon at the Caster class."
+    },
+    "objeto.catalizador_assassin.nombre": {
+      "es": "Catalizador: Assassin",
+      "en": "Catalyst: Assassin"
+    },
+    "objeto.catalizador_assassin.desc": {
+      "es": "Apunta tu invocacion a la clase Assassin.",
+      "en": "Points your summon at the Assassin class."
+    },
+    "objeto.catalizador_berserker.nombre": {
+      "es": "Catalizador: Berserker",
+      "en": "Catalyst: Berserker"
+    },
+    "objeto.catalizador_berserker.desc": {
+      "es": "Apunta tu invocacion a la clase Berserker.",
+      "en": "Points your summon at the Berserker class."
+    },
+    "objeto.catalizador_ruler.nombre": {
+      "es": "Catalizador: Ruler",
+      "en": "Catalyst: Ruler"
+    },
+    "objeto.catalizador_ruler.desc": {
+      "es": "Apunta tu invocacion a la clase Ruler.",
+      "en": "Points your summon at the Ruler class."
+    },
+    "inventario.vacio": {
+      "es": "No llevas nada. Los objetos los suelta ganar un combate de entrenamiento.",
+      "en": "You are carrying nothing. Items drop from winning a training fight."
+    },
+    "inventario.cabecera": {
+      "es": "**Tu inventario** ({total}/{tope})",
+      "en": "**Your inventory** ({total}/{tope})"
+    },
+    "inventario.linea": {
+      "es": "- **{nombre}** x{cuantos} - {descripcion}",
+      "en": "- **{nombre}** x{cuantos} - {descripcion}"
+    },
+    "inventario.grupo_combate": {
+      "es": "\n*En combate* (usar uno no te cuesta el turno, pero solo uno por batalla):",
+      "en": "\n*In battle* (using one does not cost you the turn, but only one per battle):"
+    },
+    "inventario.grupo_preparacion": {
+      "es": "\n*En la preparacion*:",
+      "en": "\n*During preparation*:"
+    },
+    "inventario.grupo_invocacion": {
+      "es": "\n*Catalizadores* (todavia no se pueden usar):",
+      "en": "\n*Catalysts* (not usable yet):"
+    },
+    "inventario.placeholder": {
+      "es": "Usa un objeto",
+      "en": "Use an item"
+    },
+    "inventario.nada_que_usar": {
+      "es": "Ahora mismo no puedes usar nada de lo que llevas.",
+      "en": "Right now you cannot use anything you are carrying."
+    },
+    "inventario.no_lo_tienes": {
+      "es": "No llevas eso.",
+      "en": "You are not carrying that."
+    },
+    "inventario.lleno": {
+      "es": "Tu inventario esta lleno ({tope}): no cabe {nombre}.",
+      "en": "Your inventory is full ({tope}): {nombre} does not fit."
+    },
+    "inventario.suelta": {
+      "es": "Has encontrado **{nombre}**.",
+      "en": "You found **{nombre}**."
+    },
+    "inventario.ya_usaste": {
+      "es": "Ya usaste un objeto en esta batalla.",
+      "en": "You already used an item in this battle."
+    },
+    "inventario.no_en_combate": {
+      "es": "**{nombre}** no se usa en combate.",
+      "en": "**{nombre}** is not used in battle."
+    },
+    "inventario.no_en_preparacion": {
+      "es": "**{nombre}** no se usa en la preparacion.",
+      "en": "**{nombre}** is not used during preparation."
+    },
+    "inventario.catalizador_pendiente": {
+      "es": "Los catalizadores todavia no hacen nada: falta decidir la mecanica.",
+      "en": "Catalysts do nothing yet: the mechanic is still undecided."
+    },
+    "inventario.usado": {
+      "es": "Has usado **{nombre}**.",
+      "en": "You used **{nombre}**."
+    },
+    "inventario.xp_ganada": {
+      "es": "Has usado **{nombre}**: {valor} de experiencia.",
+      "en": "You used **{nombre}**: {valor} experience."
+    },
+    "inventario.curado_antes": {
+      "es": "Has usado **{nombre}**: vas a la batalla con la vida entera.",
+      "en": "You used **{nombre}**: you enter the battle at full health."
+    },
+    "inventario.combate_extra": {
+      "es": "Has usado **{nombre}**: te queda un combate de entrenamiento mas.",
+      "en": "You used **{nombre}**: you have one more training fight."
+    },
+    "combate.objeto": {
+      "es": "Usar un objeto",
+      "en": "Use an item"
+    },
+    "combate.objeto_usado": {
+      "es": "{nombre} usa {objeto}.",
+      "en": "{nombre} uses {objeto}."
+    },
+    "combate.sello": {
+      "es": "Gastar un Sello",
+      "en": "Spend a Command Seal"
+    },
+    "combate.elige_sello": {
+      "es": "Un Sello de Comando no vuelve. Elige que le pides.",
+      "en": "A Command Seal never comes back. Choose what you ask of it."
+    },
+    "combate.placeholder_sello": {
+      "es": "Que le pides al Sello",
+      "en": "What you ask of the Seal"
+    },
+    "sello.usado": {
+      "es": "{nombre} quema un Sello de Comando: {sello}.",
+      "en": "{nombre} burns a Command Seal: {sello}."
+    },
+    "sello.mana_lleno": {
+      "es": "{nombre} llena su mana (+{mana}, {total}).",
+      "en": "{nombre} fills their mana (+{mana}, {total})."
+    },
+    "sello.enfriamientos": {
+      "es": "Las habilidades de {nombre} vuelven a estar listas.",
+      "en": "{nombre}'s skills are ready again."
+    },
+    "sello.mana.nombre": {
+      "es": "Llenar el mana",
+      "en": "Fill the mana"
+    },
+    "sello.mana.descripcion": {
+      "es": "Llena la barra: puedes lanzar el Noble Fantasma este mismo turno.",
+      "en": "Fills the bar: you can unleash your Noble Phantasm this very turn."
+    },
+    "sello.curar.nombre": {
+      "es": "Curar",
+      "en": "Heal"
+    },
+    "sello.curar.descripcion": {
+      "es": "Recupera una buena parte de tu vida maxima.",
+      "en": "Recovers a good part of your maximum health."
+    },
+    "sello.enfriamientos.nombre": {
+      "es": "Habilidades listas",
+      "en": "Skills ready"
+    },
+    "sello.enfriamientos.descripcion": {
+      "es": "Apaga los enfriamientos: puedes repetir una habilidad ya usada.",
+      "en": "Clears cooldowns: you can repeat a skill you already used."
+    },
+    "sello.restantes": {
+      "es": "Sellos de Comando: {sellos}",
+      "en": "Command Seals: {sellos}"
+    },
+    "sello.sin_sellos": {
+      "es": "No te quedan Sellos de Comando.",
+      "en": "You have no Command Seals left."
+    },
+    "sello.ya_en_esta_batalla": {
+      "es": "Ya gastaste un Sello en esta batalla.",
+      "en": "You already spent a Seal in this battle."
+    },
+    "sello.no_es_uno": {
+      "es": "Eso no es ninguno de los tres usos del Sello.",
+      "en": "That is none of the Seal's three uses."
+    },
+    "sello.no_puede": {
+      "es": "{nombre} no puede gastar un Sello ahora.",
+      "en": "{nombre} cannot spend a Seal right now."
+    },
+    "sello.gastado": {
+      "es": "Gastas un Sello de Comando. Te quedan {sellos}.",
+      "en": "You spend a Command Seal. You have {sellos} left."
+    },
+    "objeto.catalizador_servant.nombre": {
+      "es": "Catalizador: {servant}",
+      "en": "Catalyst: {servant}"
+    },
+    "objeto.catalizador_servant.desc": {
+      "es": "Apunta tu invocacion a {servant}.",
+      "en": "Points your summon at {servant}."
+    },
+    "moneda.oro": {
+      "es": "oro",
+      "en": "gold"
+    },
+    "moneda.griales": {
+      "es": "griales",
+      "en": "grails"
+    },
+    "moneda.resumen": {
+      "es": "Oro: **{oro}** | Griales: **{griales}**",
+      "en": "Gold: **{oro}** | Grails: **{griales}**"
+    },
+    "moneda.oro_explicado": {
+      "es": "El oro lo da ganar entrenamientos y batallas, y se pierde al acabar la guerra.",
+      "en": "Gold comes from winning training fights and battles, and is lost when the war ends."
+    },
+    "moneda.griales_explicado": {
+      "es": "Los griales los da ganar una guerra y se quedan en tu cuenta.",
+      "en": "Grails come from winning a war and stay in your account."
+    },
+    "menu.rendirse": {
+      "es": "Rendirse",
+      "en": "Surrender"
+    },
+    "menu.rendirse_seguro": {
+      "es": "Seguro? Pulsa otra vez",
+      "en": "Sure? Press again"
+    },
+    "rendirse.hecho": {
+      "es": "Te has retirado de la guerra. No se puede deshacer.",
+      "en": "You have withdrawn from the war. This cannot be undone."
+    },
+    "rendirse.publico": {
+      "es": "**{master}** se retira de la guerra. Quedan {quedan} en pie.",
+      "en": "**{master}** withdraws from the war. {quedan} left standing."
+    },
+    "rendirse.ultimo_en_pie": {
+      "es": "La guerra acaba aqui: **{master}** es el ultimo en pie.",
+      "en": "The war ends here: **{master}** is the last one standing."
+    },
+    "rendirse.sin_grial": {
+      "es": "El Grial no se entrega: una guerra que acaba porque los demas se retiran lo reparte solo si se unieron {minimo} personas o mas.",
+      "en": "No Grail is awarded: a war that ends because everyone else withdrew only awards it if {minimo} or more people joined."
+    },
+    "rendirse.sin_nadie": {
+      "es": "No queda nadie en pie, asi que la guerra acaba sin ganador.",
+      "en": "Nobody is left standing, so the war ends with no winner."
+    },
+    "cuenta.resumen": {
+      "es": "**Tu cuenta**\n  Griales: {griales}\n  Guerras ganadas: {ganadas}\n{explicado}",
+      "en": "**Your account**\n  Grails: {griales}\n  Wars won: {ganadas}\n{explicado}"
+    },
+    "cuenta.sin_nada": {
+      "es": "Todavia no has ganado ninguna guerra. El Grial se reparte cuando juegan 4 personas o mas y ganas tu.",
+      "en": "You have not won a war yet. The Grail is awarded when 4 or more people play and you are the one left standing."
+    },
+    "menu.tienda": {
+      "es": "Tienda ({oro} de oro)",
+      "en": "Shop ({oro} gold)"
+    },
+    "tienda.cabecera": {
+      "es": "**La tienda**\n{monedas}",
+      "en": "**The shop**\n{monedas}"
+    },
+    "tienda.grupo_oro": {
+      "es": "\n*Con oro* (se gasta al acabar la guerra):",
+      "en": "\n*With gold* (spent when the war ends):"
+    },
+    "tienda.grupo_griales": {
+      "es": "\n*Con griales* (apuntan tu invocacion de la proxima guerra):",
+      "en": "\n*With grails* (they point your next war's summon):"
+    },
+    "tienda.linea": {
+      "es": "- **{nombre}** - {precio} {moneda} - {descripcion}",
+      "en": "- **{nombre}** - {precio} {moneda} - {descripcion}"
+    },
+    "tienda.linea_catalizador_clase": {
+      "es": "- Catalizador de una clase - {precio} griales",
+      "en": "- Class catalyst - {precio} grails"
+    },
+    "tienda.linea_catalizador_servant": {
+      "es": "- Catalizador de un Servant concreto - {precio} griales",
+      "en": "- Catalyst for a specific Servant - {precio} grails"
+    },
+    "tienda.placeholder_oro": {
+      "es": "Compra con oro",
+      "en": "Buy with gold"
+    },
+    "tienda.placeholder_clase": {
+      "es": "Catalizador de clase ({precio} griales)",
+      "en": "Class catalyst ({precio} grails)"
+    },
+    "tienda.boton_servant": {
+      "es": "Catalizador de Servant ({precio} griales)",
+      "en": "Servant catalyst ({precio} grails)"
+    },
+    "tienda.opcion_oro": {
+      "es": "{precio} de oro",
+      "en": "{precio} gold"
+    },
+    "tienda.comprado": {
+      "es": "Has comprado **{nombre}** por {precio} {moneda}. Te quedan {resto}.",
+      "en": "You bought **{nombre}** for {precio} {moneda}. You have {resto} left."
+    },
+    "tienda.sin_oro": {
+      "es": "No te llega el oro: **{nombre}** cuesta {precio} y tienes {tienes}.",
+      "en": "Not enough gold: **{nombre}** costs {precio} and you have {tienes}."
+    },
+    "tienda.sin_griales": {
+      "es": "No te llegan los griales: **{nombre}** cuesta {precio} y tienes {tienes}. Los griales los da ganar una guerra.",
+      "en": "Not enough grails: **{nombre}** costs {precio} and you have {tienes}. Grails come from winning a war."
+    },
+    "tienda.no_se_vende": {
+      "es": "Eso no se vende aqui.",
+      "en": "That is not for sale here."
+    },
+    "tienda.solo_preparacion": {
+      "es": "La tienda solo abre durante la preparacion del dia.",
+      "en": "The shop only opens during the day's preparation."
+    },
+    "tienda.listo_no_compras": {
+      "es": "Ya dijiste que acabaste por hoy: no puedes comprar hasta manana.",
+      "en": "You already said you were done for today: no buying until tomorrow."
+    },
+    "tienda.buscar_titulo": {
+      "es": "Catalizador de Servant",
+      "en": "Servant catalyst"
+    },
+    "tienda.buscar_campo": {
+      "es": "Nombre del Servant",
+      "en": "Servant name"
+    },
+    "tienda.buscar_ayuda": {
+      "es": "Por ejemplo: Altria Pendragon",
+      "en": "For example: Altria Pendragon"
+    },
+    "tienda.servant_no_encontrado": {
+      "es": "No encuentro a ningun Servant que se llame asi: {busqueda}",
+      "en": "I cannot find any Servant by that name: {busqueda}"
+    },
+    "tienda.servant_ambiguo": {
+      "es": "Hay varios que encajan con {busqueda}. Se parecen estos: {opciones}",
+      "en": "Several match {busqueda}. These are the closest: {opciones}"
+    },
+    "bot.npc_oro": {
+      "es": " Te llevas {oro} de oro.",
+      "en": " You take {oro} gold."
+    },
+    "bot.oro_de_la_batalla": {
+      "es": "Por ganar la batalla te llevas {oro} de oro.",
+      "en": "For winning the battle you take {oro} gold."
+    },
+    "bot.griales_ganados": {
+      "es": "**{nombre}** se lleva {griales} griales, que se quedan en su cuenta para las proximas guerras.",
+      "en": "**{nombre}** takes {griales} grails, which stay in their account for future wars."
+    },
+    "menu.dia_viejo": {
+      "es": "Este menu es del dia {dia} y la guerra ya va por el {actual}. Abre el menu nuevo desde el canal.",
+      "en": "This menu is from day {dia} and the war is already on day {actual}. Open the new menu from the channel."
+    },
+    "batalla.esquiva_habilidad": {
+      "es": "{nombre} esquiva el golpe sin que le roce.",
+      "en": "{nombre} dodges the blow untouched."
+    },
+    "batalla.aguanta": {
+      "es": "{nombre} aguanta en pie con {vida}/{maxima} de vida.",
+      "en": "{nombre} endures, standing with {vida}/{maxima} HP."
+    },
+    "efecto.evasion": {
+      "es": "{nombre} esquivara el proximo golpe que le llegue en {duracion}.",
+      "en": "{nombre} will dodge the next blow within {duracion}."
+    },
+    "efecto.aguantar": {
+      "es": "{nombre} no caera con el proximo golpe mortal durante {duracion}: aguantara con el {porcentaje}% de su vida.",
+      "en": "{nombre} will not fall to the next lethal blow for {duracion}: they will hold on with {porcentaje}% HP."
+    },
+    "efecto.bajar_ataque": {
+      "es": "{nombre} pega un {porcentaje}% menos durante {duracion}.",
+      "en": "{nombre} hits {porcentaje}% weaker for {duracion}."
+    },
+    "efecto.bajar_defensa": {
+      "es": "{nombre} recibe un {porcentaje}% mas de dano durante {duracion}.",
+      "en": "{nombre} takes {porcentaje}% more damage for {duracion}."
+    },
+    "ficha.efecto_evasion": {
+      "es": "esquiva el proximo golpe",
+      "en": "dodges the next blow"
+    },
+    "ficha.efecto_aguantar": {
+      "es": "no cae con el golpe mortal y aguanta al {porcentaje}% de vida",
+      "en": "survives a lethal blow at {porcentaje}% HP"
+    },
+    "ficha.efecto_bajar_ataque": {
+      "es": "-{porcentaje}% de dano hecho",
+      "en": "-{porcentaje}% damage dealt"
+    },
+    "ficha.efecto_bajar_defensa": {
+      "es": "+{porcentaje}% de dano recibido",
+      "en": "+{porcentaje}% damage taken"
+    },
+    "efecto.bajar_mana": {
+      "es": "{nombre} pierde {mana} de mana ({total}).",
+      "en": "{nombre} loses {mana} mana ({total})."
+    },
+    "ficha.efecto_bajar_mana": {
+      "es": "-{mana} de mana",
+      "en": "-{mana} mana"
+    }
+  }
+}

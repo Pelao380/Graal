@@ -1,0 +1,518 @@
+{
+  "_nota": "Retoques escritos a mano, que se aplican encima de personajes_generados.json emparejados por collectionNo. Una ficha de aqui solo necesita traer lo que cambia: el resto (nombre, clase, estadisticas, rareza) lo hereda del plantel generado. Reimportar el plantel no borra nada de este archivo.",
+  "_estadisticas": "Las estadisticas salen del importador, no de aqui, para que todo el plantel respete el mismo reparto. Si hace falta retocar a mano las de un personaje concreto, se añaden aqui los campos vida, ataque y velocidad, sumando 3.00.",
+  "_rasgos": "Un rasgo solo puede mover las perillas definidas en src/game/personajes.py (mana_inicial, mana_extra_ataque, costo_noble_fantasma, prob_evasion, prob_segunda_defensa, puede_defender, sellos, ataca_primero_si_el_blanco_no_defiende, objetivo_al_azar). Asi un personaje nuevo no puede inventar una regla que rompa el combate. La descripcion puede traer su version en ingles en descripcion_en.",
+  "_habilidades": "Las habilidades se mezclan hueco por hueco: un nombre a secas cambia el nombre y conserva el efecto que trajo el importador, asi que el orden importa y cada nombre debe ser la traduccion de la habilidad que ocupa ese hueco. Para cambiar tambien el efecto se pone un objeto con los campos que cambian (efecto, objetivo, valor, turnos, enfriamiento).",
+  "personajes": [
+    {
+      "collectionNo": 2,
+      "rasgo": {
+        "descripcion": "La mejor guardia: su segunda defensa seguida acierta la mitad de las veces.",
+        "descripcion_en": "The finest guard: its second defence in a row holds half the time.",
+        "prob_segunda_defensa": 0.5
+      },
+      "habilidades": [
+        "Carisma",
+        "Explosion de Mana",
+        "Instinto"
+      ],
+      "noble_fantasma": "Excalibur"
+    },
+    {
+      "collectionNo": 11,
+      "rasgo": {
+        "descripcion": "Dispara de lejos: golpea antes que nadie a quien no se defiende.",
+        "descripcion_en": "Shoots from afar: strikes before anyone else at a target that is not defending.",
+        "ataca_primero_si_el_blanco_no_defiende": true
+      },
+      "habilidades": [
+        "Ojo de la Mente",
+        "Clarividencia",
+        "Forja Magica"
+      ],
+      "noble_fantasma": "Unlimited Blade Works"
+    },
+    {
+      "collectionNo": 17,
+      "rasgo": {
+        "descripcion": "Runas de guerra: cada ataque le devuelve 5 de mana extra.",
+        "descripcion_en": "War runes: every attack returns 5 extra mana.",
+        "mana_extra_ataque": 5
+      },
+      "habilidades": [
+        "Batalla Continua",
+        "Proteccion contra Flechas",
+        "Retirada"
+      ],
+      "noble_fantasma": "Gae Bolg"
+    },
+    {
+      "collectionNo": 108,
+      "rasgo": {
+        "descripcion": "Llega con su ejercito: empieza la batalla con 40 de mana.",
+        "descripcion_en": "Arrives with his army: starts the battle with 40 mana.",
+        "mana_inicial": 40
+      },
+      "habilidades": [
+        "Carisma",
+        "Tactica",
+        "Conquistador del Rayo"
+      ],
+      "noble_fantasma": "Ionioi Hetairoi"
+    },
+    {
+      "collectionNo": 31,
+      "rasgo": {
+        "descripcion": "Hechicera: su Noble Fantasma cuesta 80 en vez de 100.",
+        "descripcion_en": "Sorceress: her Noble Phantasm costs 80 instead of 100.",
+        "costo_noble_fantasma": 80
+      },
+      "habilidades": [
+        "Palabras Divinas Rapidas",
+        "Moneda de Argos",
+        "Lecciones de Circe"
+      ],
+      "noble_fantasma": "Rule Breaker"
+    },
+    {
+      "collectionNo": 40,
+      "rasgo": {
+        "descripcion": "Presencia oculta: al defenderse esquiva el golpe el 20% de las veces.",
+        "descripcion_en": "Presence concealment: when defending, dodges the blow 20% of the time.",
+        "prob_evasion": 0.2
+      },
+      "habilidades": [
+        "Lanzamiento de Daga",
+        "Automodificacion",
+        "Proteccion contra el Viento"
+      ],
+      "noble_fantasma": "Zabaniya"
+    },
+    {
+      "collectionNo": 47,
+      "rasgo": {
+        "descripcion": "Demencia: no distingue amigo de enemigo. Ataca a quien le toca al azar, no a quien su Master elige.",
+        "descripcion_en": "Madness: cannot tell friend from foe. Attacks whoever it lands on at random, not the one its Master picks.",
+        "objetivo_al_azar": true
+      },
+      "habilidades": [
+        "Valor",
+        "Ojo de la Mente (Falso)",
+        "Batalla Continua"
+      ],
+      "noble_fantasma": "Nine Lives"
+    },
+    {
+      "collectionNo": 59,
+      "rasgo": {
+        "descripcion": "Autoridad del Ruler: dispone de 5 Sellos de Comando en vez de 3.",
+        "descripcion_en": "Ruler's authority: has 5 Command Seals instead of 3.",
+        "sellos": 5
+      },
+      "habilidades": [
+        "Revelacion",
+        "Revelacion del Nombre Verdadero",
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro",
+          "nombre": "Juicio Divino"
+        }
+      ],
+      "noble_fantasma": "Luminosite Eternelle"
+    },
+    {
+      "collectionNo": 10,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 15,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 19,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        {
+          "efecto": "evasion",
+          "objetivo": "uno_mismo"
+        }
+      ]
+    },
+    {
+      "collectionNo": 23,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 28,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 29,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 32,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        {
+          "efecto": "evasion",
+          "objetivo": "uno_mismo"
+        }
+      ]
+    },
+    {
+      "collectionNo": 35,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "evasion",
+          "objetivo": "uno_mismo"
+        }
+      ]
+    },
+    {
+      "collectionNo": 41,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 44,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        {
+          "efecto": "evasion",
+          "objetivo": "uno_mismo"
+        }
+      ]
+    },
+    {
+      "collectionNo": 75,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 81,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 85,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 86,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 93,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        }
+      ]
+    },
+    {
+      "collectionNo": 94,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 95,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 99,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        }
+      ]
+    },
+    {
+      "collectionNo": 111,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 117,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        }
+      ]
+    },
+    {
+      "collectionNo": 122,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        }
+      ]
+    },
+    {
+      "collectionNo": 124,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "evasion",
+          "objetivo": "uno_mismo"
+        }
+      ]
+    },
+    {
+      "collectionNo": 134,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 142,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        }
+      ]
+    },
+    {
+      "collectionNo": 143,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 146,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 185,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 203,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        }
+      ]
+    },
+    {
+      "collectionNo": 225,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 251,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 258,
+      "habilidades": [
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "collectionNo": 263,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 279,
+      "habilidades": [
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        },
+        null
+      ]
+    },
+    {
+      "collectionNo": 306,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        }
+      ]
+    },
+    {
+      "collectionNo": 414,
+      "habilidades": [
+        null,
+        null,
+        {
+          "efecto": "bajar_mana",
+          "objetivo": "otro"
+        }
+      ]
+    }
+  ]
+}

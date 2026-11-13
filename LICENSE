@@ -1,0 +1,59 @@
+MIT License
+
+Copyright (c) 2026 Cristopher Soriano
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Lo que esta licencia cubre, y lo que no
+
+La licencia MIT de arriba cubre **el codigo y los documentos de este
+repositorio**: el motor de combate, el bot, el simulador, las pruebas y las
+reglas del juego.
+
+**No cubre, porque no son mios:**
+
+- Los personajes, sus nombres, sus clases y sus Noble Fantasmas, que son de
+  **Type-Moon** y de sus licenciatarios (Aniplex, entre otros). Este proyecto
+  no esta afiliado a ellos, no esta autorizado por ellos y no tiene ningun
+  animo de lucro.
+- Las estadisticas y los nombres que vienen del export de **Atlas Academy**
+  (`bot/data/personajes_generados.json`), que son datos *sobre* la obra y se
+  usan tal cual se publican.
+- El **arte oficial**, que no esta en este repositorio y que el bot no sube a
+  ningun sitio: solo enlaza las imagenes de Atlas Academy, asi que la copia
+  que ve un jugador la pide su cliente y nunca pasa por aqui. Hay una prueba
+  (`bot/tests/test_arte.py`) que falla si alguien cruza esa linea.
+
+Si representas a alguno de los titulares y quieres que algo de aqui deje de
+estar, abre una incidencia y se quita.
+
+## What this license covers, and what it does not
+
+The MIT license above covers **the code and documentation in this repository**:
+the combat engine, the bot, the simulator, the tests and the game rules.
+
+It does **not** cover the characters, their names, classes and Noble Phantasms,
+which belong to **Type-Moon** and its licensees; the stats and names taken from
+the **Atlas Academy** export; or the official artwork, which is not in this
+repository and is never uploaded by the bot (it only links to Atlas Academy).
+This is a non-commercial fan project, not affiliated with or endorsed by any of
+the rights holders. If you represent one of them and want something removed,
+open an issue and it will be removed.

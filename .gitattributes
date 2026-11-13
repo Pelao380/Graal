@@ -1,0 +1,7 @@
+# Los archivos de texto se guardan con LF en el repositorio, aunque se trabaje
+# en Windows. Sin esto, un clon en otro sistema ve el archivo entero como
+# cambiado y un diff deja de servir para nada.
+* text=auto eol=lf
+
+# Datos generados: no tiene sentido mirar su diff a mano.
+bot/data/personajes_generados.json -diff
